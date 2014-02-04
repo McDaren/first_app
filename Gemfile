@@ -3,6 +3,16 @@ source 'https://rubygems.org'
 # ruby-gemset=railstutorial_rails_4_0
 ruby '2.0.0'
 
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -48,6 +58,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
